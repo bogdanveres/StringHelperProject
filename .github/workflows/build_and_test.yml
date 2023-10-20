@@ -30,10 +30,13 @@ jobs:
         VSTEST_LOG_PATH: test_results.log
 
     - name: Publish test results
-      uses: EnricoMi/publish-test-results-action@v1
+      if: success() || failure() 
+      uses: dorny/test-reporter@v1
       with:
+        name: Test Results
         files: test_results.xml
         format: VSTest
+        reporter: dotnet-trx
 
     - name: Upload test results
       uses: actions/upload-artifact@v2
