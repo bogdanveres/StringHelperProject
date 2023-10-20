@@ -475,3 +475,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+StringHelperDLL/obj/Debug/net7.0/StringHelperDLL.assets.cache
+StringHelperDLL/obj/Debug/net7.0/StringHelperDLL.csproj.FileListAbsolute.txt
+StringHelperUnitTests/obj/Debug/net7.0/StringHelperUnitTests.assets.cache
+StringHelperUnitTests/obj/Debug/net7.0/StringHelperUnitTests.csproj.FileListAbsolute.txt
