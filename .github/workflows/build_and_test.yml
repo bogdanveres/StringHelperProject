@@ -25,7 +25,7 @@ jobs:
       run: dotnet build --configuration Release
 
     - name: Run tests
-      run: dotnet test --configuration Release --logger "trx;LogFileName=test_results.xml"
+      run: dotnet test --configuration Release --logger "trx;LogFileName=test_results.xml" -r "TestResults"
       env:
         VSTEST_LOG_PATH: test_results.log
 
@@ -34,11 +34,11 @@ jobs:
       uses: dorny/test-reporter@v1
       with:
         name: Test Results
-        path: test_results.xml
+        path: TestResults/test_results.xml
         reporter: dotnet-trx
 
     - name: Upload test results
       uses: actions/upload-artifact@v2
       with:
         name: Test Results
-        path: test_results.xml
+        path: TestResults/test_results.xml
