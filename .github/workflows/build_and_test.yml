@@ -34,8 +34,7 @@ jobs:
       uses: dorny/test-reporter@v1
       with:
         name: Test Results
-        files: test_results.xml
-        format: VSTest
+        path: test_results.xml
         reporter: dotnet-trx
 
     - name: Upload test results
