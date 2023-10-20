@@ -34,11 +34,12 @@ jobs:
       uses: dorny/test-reporter@v1
       with:
         name: Test Results
-        path: /home/runner/work/StringHelperProject/StringHelperProject/StringHelperUnitTests/TestResults/test_results.xml
+        path: TestResults/test_results.xml
         reporter: dotnet-trx
 
     - name: Upload test results
+      if: success() || failure()
       uses: actions/upload-artifact@v2
       with:
         name: Test Results
-        path: /home/runner/work/StringHelperProject/StringHelperProject/StringHelperUnitTests/TestResults/test_results.xml
+        path: TestResults/test_results.xml
