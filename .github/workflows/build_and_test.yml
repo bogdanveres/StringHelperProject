@@ -34,7 +34,7 @@ jobs:
       uses: dorny/test-reporter@v1
       with:
         name: Test Results
-        path: TestResults/test_results.xml
+        path: StringHelperUnitTests/TestResults/test_results.xml
         reporter: dotnet-trx
 
     - name: Upload test results
@@ -42,4 +42,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Test Results
-        path: TestResults/test_results.xml
+        path: StringHelperUnitTests/TestResults/test_results.xml
