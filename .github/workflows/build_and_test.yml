@@ -1,0 +1,36 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '6.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release
+
+    - name: Run tests
+      run: dotnet test --configuration Release --logger "trx;LogFileName=test_results.xml"
+      env:
+        VSTEST_LOG_PATH: test_results.log
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v2
+      with:
+        name: Test Results
+        path: test_results.xml
