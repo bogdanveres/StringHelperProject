@@ -29,6 +29,12 @@ jobs:
       env:
         VSTEST_LOG_PATH: test_results.log
 
+    - name: Publish test results
+      uses: EnricoMi/publish-test-results-action@v1
+      with:
+        files: test_results.xml
+        format: VSTest
+
     - name: Upload test results
       uses: actions/upload-artifact@v2
       with:
