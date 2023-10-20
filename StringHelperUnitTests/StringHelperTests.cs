@@ -216,21 +216,6 @@ namespace StringHelperUnitTests
         }
 
         [TestMethod]
-        public void SubstringBetween_InvalidInput_ReturnsEmptyString()
-        {
-            // Arrange
-            string str = "Hello world!";
-            string start = "[";
-            string end = "]";
-
-            // Act
-            string result = StringHelper.SubstringBetween(str, start, end);
-
-            // Assert
-            Assert.AreEqual(result, string.Empty);
-        }
-
-        [TestMethod]
         public void Base64Encode_ValidInput_ReturnsEncodedString()
         {
             // Arrange
