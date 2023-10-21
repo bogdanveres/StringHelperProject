@@ -479,3 +479,15 @@ StringHelperDLL/obj/Debug/net7.0/StringHelperDLL.assets.cache
 StringHelperDLL/obj/Debug/net7.0/StringHelperDLL.csproj.FileListAbsolute.txt
 StringHelperUnitTests/obj/Debug/net7.0/StringHelperUnitTests.assets.cache
 StringHelperUnitTests/obj/Debug/net7.0/StringHelperUnitTests.csproj.FileListAbsolute.txt
+StringHelperDLL/obj/project.assets.json
+StringHelperDLL/obj/project.nuget.cache
+StringHelperDLL/obj/StringHelperDLL.csproj.nuget.dgspec.json
+StringHelperDLL/obj/StringHelperDLL.csproj.nuget.g.props
+StringHelperDLL/obj/Debug/net7.0/StringHelperDLL.assets.cache
+StringHelperDLL/obj/Debug/net7.0/StringHelperDLL.csproj.FileListAbsolute.txt
+StringHelperUnitTests/obj/project.assets.json
+StringHelperUnitTests/obj/project.nuget.cache
+StringHelperUnitTests/obj/StringHelperUnitTests.csproj.nuget.dgspec.json
+StringHelperUnitTests/obj/StringHelperUnitTests.csproj.nuget.g.props
+StringHelperUnitTests/obj/Debug/net7.0/StringHelperUnitTests.assets.cache
+StringHelperUnitTests/obj/Debug/net7.0/StringHelperUnitTests.csproj.FileListAbsolute.txt
